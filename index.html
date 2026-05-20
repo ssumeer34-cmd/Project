@@ -3,39 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITI Skill Bazaar 3D - R.S. Pura</title>
+    <title>ITI Skill Bazaar - R.S. Pura</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 12px; }
-    .header { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); color: white; padding: 25px 15px; text-align: center; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); margin-bottom: 20px; }
-    .header h1 { font-size: 28px; font-weight: 800; text-shadow: 3px 3px 6px rgba(0,0,0,0.4); }
-    .jammu-badge { background: linear-gradient(135deg, #00b09b, #96c93d); padding: 8px 20px; border-radius: 25px; font-size: 14px; display: inline-block; margin-top: 10px; font-weight: 700; }
-    .box { background: rgba(255,255,255,0.98); padding: 22px; margin: 20px 0; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
-    .box h2 { color: #2d3748; margin-bottom: 18px; font-size: 22px; font-weight: 800; }
+  .header { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); color: white; padding: 25px 15px; text-align: center; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); margin-bottom: 20px; }
+  .header h1 { font-size: 28px; font-weight: 800; text-shadow: 3px 3px 6px rgba(0,0,0,0.4); }
+  .jammu-badge { background: linear-gradient(135deg, #00b09b, #96c93d); padding: 8px 20px; border-radius: 25px; font-size: 14px; display: inline-block; margin-top: 10px; font-weight: 700; }
+  .box { background: rgba(255,255,255,0.98); padding: 22px; margin: 20px 0; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+  .box h2 { color: #2d3748; margin-bottom: 18px; font-size: 22px; font-weight: 800; }
         input, textarea, select { width: 100%; padding: 15px; margin: 10px 0; border: 3px solid #e2e8f0; border-radius: 12px; font-size: 16px; font-family: 'Poppins'; }
         input:focus, textarea:focus, select:focus { border-color: #667eea; box-shadow: 0 0 0 4px rgba(102,126,234,0.15); transform: translateY(-2px); outline: none; }
-    .btn-add { width: 100%; padding: 18px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 12px; font-size: 18px; font-weight: 800; cursor: pointer; margin: 12px 0; box-shadow: 0 12px 25px rgba(102,126,234,0.4); }
-    .btn-add:active { transform: translateY(2px); }
-    .product { background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: none; padding: 25px; margin: 25px 0; border-radius: 20px; box-shadow: 0 25px 50px rgba(0,0,0,0.15); position: relative; overflow: hidden; transition: all 0.4s ease; }
-    .product:active { transform: scale(0.98); }
-    .product::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c); }
-    .product-img { width: 100%; height: 250px; object-fit: cover; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
-    .student-card { background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%); color: white; padding: 20px; border-radius: 15px; margin: 12px 0; box-shadow: 0 12px 30px rgba(0,0,0,0.3); border: 2px solid rgba(251,191,36,0.3); }
-    .student-name { font-size: 24px; font-weight: 800; color: #fbbf24; margin-bottom: 8px; }
-    .trade-badge { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 6px 15px; border-radius: 20px; font-size: 13px; display: inline-block; font-weight: 700; }
-    .contact-item { background: rgba(255,255,255,0.1); padding: 10px; border-radius: 8px; font-size: 14px; margin: 8px 0; }
-    .contact-item b { color: #fbbf24; display: block; font-size: 11px; margin-bottom: 2px; }
-    .samaan-name { font-size: 24px; color: #dc2626; font-weight: 800; margin: 15px 0 10px 0; }
-    .price { color: #16a34a; font-size: 32px; font-weight: 800; margin: 12px 0; display: inline-block; background: rgba(22,163,74,0.1); padding: 6px 18px; border-radius: 12px; }
-    .detail { background: #f8fafc; padding: 15px; border-radius: 12px; margin: 15px 0; font-size: 15px; line-height: 1.6; border-left: 4px solid #667eea; }
-    .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
-    .whatsapp-btn { background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 16px; border: none; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px rgba(37,211,102,0.4); }
-    .call-btn { background: linear-gradient(135deg, #0ea5e9, #0284c7); color: white; padding: 16px; border: none; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px rgba(14,165,233,0.4); text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center; }
-    .delete-btn { background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 10px; border: none; border-radius: 10px; font-size: 14px; margin-top: 15px; cursor: pointer; width: 100%; font-weight: 700; }
-    .jammu-special { position: absolute; top: 20px; right: 20px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 800; box-shadow: 0 6px 15px rgba(245,158,11,0.5); transform: rotate(8deg); }
-    .counter-3d { background: linear-gradient(135deg, #dc2626, #b91c1c); color: white; padding: 10px 20px; border-radius: 25px; font-size: 18px; font-weight: 800; box-shadow: 0 8px 20px rgba(220,38,38,0.4); display: inline-block; }
-    .note-3d { background: linear-gradient(135deg, #fef3c7, #fde68a); padding: 18px; border-radius: 15px; margin: 18px 0; font-size: 14px; border-left: 5px solid #f59e0b; box-shadow: 0 8px 20px rgba(245,158,11,0.2); }
+  .btn-add { width: 100%; padding: 18px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 12px; font-size: 18px; font-weight: 800; cursor: pointer; margin: 12px 0; box-shadow: 0 12px 25px rgba(102,126,234,0.4); }
+  .product { background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: none; padding: 25px; margin: 25px 0; border-radius: 20px; box-shadow: 0 25px 50px rgba(0,0,0,0.15); position: relative; overflow: hidden; }
+  .product::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c); }
+  .product-img { width: 100%; height: 250px; object-fit: cover; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+  .student-card { background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%); color: white; padding: 20px; border-radius: 15px; margin: 12px 0; box-shadow: 0 12px 30px rgba(0,0,0,0.3); border: 2px solid rgba(251,191,36,0.3); }
+  .student-name { font-size: 24px; font-weight: 800; color: #fbbf24; margin-bottom: 8px; }
+  .trade-badge { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 6px 15px; border-radius: 20px; font-size: 13px; display: inline-block; font-weight: 700; }
+  .contact-item { background: rgba(255,255,255,0.1); padding: 10px; border-radius: 8px; font-size: 14px; margin: 8px 0; }
+  .contact-item b { color: #fbbf24; display: block; font-size: 11px; margin-bottom: 2px; }
+  .samaan-name { font-size: 24px; color: #dc2626; font-weight: 800; margin: 15px 0 10px 0; }
+  .price { color: #16a34a; font-size: 32px; font-weight: 800; margin: 12px 0; display: inline-block; background: rgba(22,163,74,0.1); padding: 6px 18px; border-radius: 12px; }
+  .detail { background: #f8fafc; padding: 15px; border-radius: 12px; margin: 15px 0; font-size: 15px; line-height: 1.6; border-left: 4px solid #667eea; }
+  .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+  .whatsapp-btn { background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 16px; border: none; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px rgba(37,211,102,0.4); }
+  .call-btn { background: linear-gradient(135deg, #0ea5e9, #0284c7); color: white; padding: 16px; border: none; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px rgba(14,165,233,0.4); text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center; }
+  .delete-btn { background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 10px; border: none; border-radius: 10px; font-size: 14px; margin-top: 15px; cursor: pointer; width: 100%; font-weight: 700; }
+  .jammu-special { position: absolute; top: 20px; right: 20px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 800; box-shadow: 0 6px 15px rgba(245,158,11,0.5); transform: rotate(8deg); }
+  .counter-3d { background: linear-gradient(135deg, #dc2626, #b91c1c); color: white; padding: 10px 20px; border-radius: 25px; font-size: 18px; font-weight: 800; box-shadow: 0 8px 20px rgba(220,38,38,0.4); display: inline-block; }
         @media (max-width: 600px) {.btn-group { grid-template-columns: 1fr; }.header h1 { font-size: 24px; }.student-name { font-size: 20px; }.price { font-size: 28px; } }
     </style>
 </head>
@@ -45,30 +42,26 @@
         <p>R.S. Pura | <span class="jammu-badge">🇮🇳 JAMMU KA HUNAR</span></p>
     </div>
 
-    <div class="note-3d">
-        <b>🔥 Auto Photo:</b> Trade select karte hi photo lag jayegi. <b>WhatsApp/Call direct chalega!</b>
-    </div>
-
     <div class="box">
-        <h2>📝 Apna Samaan Add Karo - Photo Auto Lagegi</h2>
+        <h2>📝 Apna Samaan Add Karo</h2>
         <input type="text" id="studentNaam" placeholder="★ Tera Naam: Rohit Kumar">
         <select id="studentTrade" onchange="showTradePhoto()">
-            <option value="">★ Trade Select Karo - Photo Auto Aa Jayegi</option>
-            <option value="Electrician">⚡ Electrician - Lamp, Wiring</option>
-            <option value="COPA">💻 COPA - Card, Website</option>
-            <option value="Welder">🔥 Welder - Gate, Grill</option>
-            <option value="Cutting Sewing">✂️ Sewing - Suit, Dress</option>
-            <option value="Plumber">🚰 Plumber - Tap, Pipe</option>
-            <option value="Fitter">🔧 Fitter - Tools</option>
+            <option value="">★ Trade Select Karo</option>
+            <option value="Electrician">⚡ Electrician</option>
+            <option value="COPA">💻 COPA</option>
+            <option value="Welder">🔥 Welder</option>
+            <option value="Cutting Sewing">✂️ Cutting Sewing</option>
+            <option value="Plumber">🚰 Plumber</option>
+            <option value="Fitter">🔧 Fitter</option>
         </select>
         <img id="tradePreview" style="width:100%;height:180px;object-fit:cover;border-radius:12px;margin:10px 0;display:none;box-shadow:0 8px 20px rgba(0,0,0,0.15);">
         <input type="tel" id="studentMobile" placeholder="★ Mobile: 9876543210" maxlength="10">
         <input type="text" id="studentAddress" placeholder="★ Address: Ward No 5, R.S. Pura">
-        <input type="text" id="samaanNaam" placeholder="★ Samaan: LED Lamp Border Special">
+        <input type="text" id="samaanNaam" placeholder="★ Samaan: LED Lamp">
         <input type="number" id="samaanDaam" placeholder="★ Daam ₹: 450">
-        <textarea id="samaanDetail" placeholder="★ Detail: 2 saal warranty, free delivery, fauji discount" rows="3"></textarea>
+        <textarea id="samaanDetail" placeholder="★ Detail: 2 saal warranty" rows="3"></textarea>
         <select id="jammuTag">
-            <option value="">Jammu Tag (Optional)</option>
+            <option value="">Jammu Tag</option>
             <option value="BORDER SPECIAL">🇮🇳 BORDER SPECIAL</option>
             <option value="BASMATI SPECIAL">🌾 BASMATI SPECIAL</option>
             <option value="YATRA SPECIAL">🙏 YATRA SPECIAL</option>
@@ -78,7 +71,7 @@
     </div>
 
     <div class="box">
-        <h2>🏪 Live 3D Bazaar - <span class="counter-3d" id="totalCount">0</span> Items</h2>
+        <h2>🏪 Live Bazaar - <span class="counter-3d" id="totalCount">0</span> Items</h2>
         <div id="bazaarList"></div>
     </div>
 
@@ -92,12 +85,7 @@
             "Fitter": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600"
         };
 
-        let data = JSON.parse(localStorage.getItem('itiBazaar3D')) || [
-            {id:1, naam:"Rohit Kumar Verma", trade:"Electrician", mobile:"9876543210", address:"Ward No 3, Near Army Camp, R.S. Pura", samaan:"LED Table Lamp - 12 Watt", daam:450, detail:"2 Saal Warranty. Border area me FREE delivery. Fauji bhaiyon ko ₹50 discount. Cash/UPI dono.", jammuTag:"BORDER SPECIAL", photo:tradePhotos["Electrician"]},
-            {id:2, naam:"Isha Sharma", trade:"COPA", mobile:"9876543211", address:"Main Market, ITI Road, R.S. Pura", samaan:"Shadi Ka Card Design + Print", daam:2000, detail:"Dogri+Hindi+English. Mata Vaishno Devi photo FREE. 100 card set. Jammu delivery FREE. Design pasand na aaye to paise wapas.", jammuTag:"YATRA SPECIAL", photo:tradePhotos["COPA"]},
-            {id:3, naam:"Ankit Singh", trade:"Welder", mobile:"9876543212", address:"Kisan Colony, Basmati Farm, R.S. Pura", samaan:"Lohe Ka Gate - 6x4 Feet", daam:5500, detail:"Basmati khet ke liye strong gate. 5 Saal guarantee. Fitting FREE. Kisan bhaiyon ko 3 installment me. Transport FREE.", jammuTag:"BASMATI SPECIAL", photo:tradePhotos["Welder"]},
-            {id:4, naam:"Priya Devi", trade:"Cutting Sewing", mobile:"9876543213", address:"Dogri Mohalla, Ward 7, R.S. Pura", samaan:"Dogri Phulkari Suit Handmade", daam:1200, detail:"Jammu traditional phulkari. Pure handmade. School dress bhi. Size 32-44. Buzurg mataon ke liye loose fitting. 1 hafte me ready.", jammuTag:"DOGRI SPECIAL", photo:tradePhotos["Cutting Sewing"]}
-        ];
+        let data = JSON.parse(localStorage.getItem('itiBazaar3D')) || [];
 
         function showTradePhoto() {
             const trade = document.getElementById('studentTrade').value;
@@ -117,7 +105,7 @@
             let address = studentAddress.value.trim(), samaan = samaanNaam.value.trim(), daam = samaanDaam.value;
             let detail = samaanDetail.value.trim(), jammuTag = jammuTag.value;
             if (!naam ||!trade ||!mobile ||!samaan ||!daam) { alert('★ wale sab fields bharna zaruri hai!'); return; }
-            if (mobile.length!== 10 || isNaN(mobile)) { alert('Mobile 10 digit ka hona chahiye! Example: 9876543210'); return; }
+            if (mobile.length!== 10 || isNaN(mobile)) { alert('Mobile 10 digit ka hona chahiye!'); return; }
 
             const autoPhoto = tradePhotos[trade] || "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600";
 
@@ -127,7 +115,6 @@
             studentNaam.value = studentTrade.value = studentMobile.value = studentAddress.value = samaanNaam.value = samaanDaam.value = samaanDetail.value = jammuTag.value = '';
             document.getElementById('tradePreview').style.display = 'none';
             dikhao();
-            alert('🎉 Mubarak Ho '+naam+'!\n\nTera samaan auto photo ke saath bazaar me lag gaya.\n\nAb customer direct contact karega! 💰');
         }
 
         function dikhao() {
@@ -155,7 +142,7 @@
         }
 
         function whatsappKaro(m,n,a,d){
-            const msg = `Namaste ${a} Ji! 🙏%0A%0AMain ITI Skill Bazaar se bol raha hun.%0A%0A*📦 Product:* ${n}%0A*💰 Daam:* ₹${d}%0A*👨‍🎓 Student:* ${a}%0A*🏫 ITI:* R.S. Pura%0A%0AKya available hai? Delivery ho jayegi? Cash/UPI?`;
+            const msg = `Namaste ${a} Ji! 🙏%0A%0AMain ITI Skill Bazaar se bol raha hun.%0A%0A*📦 Product:* ${n}%0A*💰 Daam:* ₹${d}%0A*👨‍🎓 Student:* ${a}%0A*🏫 ITI:* R.S. Pura%0A%0AKya available hai?`;
             window.open(`https://wa.me/91${m}?text=${msg}`,'_blank');
         }
 
